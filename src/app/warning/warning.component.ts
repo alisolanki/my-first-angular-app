@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-    selector: '[app-warning]',
+    selector: '.app-warning',
     templateUrl: './warning.component.html',
     styles:[`
         div{
@@ -12,7 +12,7 @@ import { Component } from '@angular/core';
 export class WarningComponent {
     disabledbtn = true;
     addon = "";
-    warning =  "Danger";
+    warning = "Danger";
     constructor(){
         setTimeout(() => {
             this.disabledbtn = false;
@@ -22,8 +22,10 @@ export class WarningComponent {
     ngOnInit() {}
 
     onWarningClick(){
-        this.disabledbtn = true;
         this.addon = "Professional";
-        this.warning = "Disabled";
     }
+
+    // changeInput(event : Event){
+    //     this.addon = (<HTMLInputElement>event.target).value;
+    // }
 }
